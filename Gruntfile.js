@@ -59,11 +59,11 @@ module.exports = function (grunt) {
             proxies: [{
                 context: ['/api'],
                 host: process.env.BACKEND_HOST || 'localhost',
-                port: 8081
+                port: process.env.BACKEND_HOST_PORT || 8081
             }, {
                 context: ['/socket.io'],
                 host: process.env.BACKEND_HOST || 'localhost',
-                port: 8081,
+                port: process.env.BACKEND_HOST_PORT || 8081,
                 ws: true
             }],
             livereload: {
